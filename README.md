@@ -1,4 +1,4 @@
-# Multi Module Project
+# Student Management System
 
 [![Build Status](https://travis-ci.org/codecentric/springboot-sample-app.svg?branch=master)](https://travis-ci.org/codecentric/springboot-sample-app)
 [![Coverage Status](https://coveralls.io/repos/github/codecentric/springboot-sample-app/badge.svg?branch=master)](https://coveralls.io/github/codecentric/springboot-sample-app?branch=master)
@@ -13,6 +13,16 @@ For building and running the application you need:
 - [Maven 3](https://maven.apache.org)
 - mysql
 
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/StudentManagementSystem`)
+3. Commit your Changes (`git commit -m 'Add some `)
+4. Push to the Branch (`git push origin feature/StudentManagementSystem`)
+5. Open a Pull Request
+
 ## Running the application locally
 
 There are several ways to run this application on your local machine. One way is build the core library and execute the `main` method in the `Application` class from your IDE.
@@ -20,7 +30,6 @@ There are several ways to run this application on your local machine. One way is
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
 ```shell
-cd core
 mvn clean install
 mvn spring-boot:run
 ```
@@ -30,6 +39,10 @@ mvn spring-boot:run
 * Maven
 * MySql
 * Lombok
+
+## Authors
+
+- [AnujaKoralage](https://github.com/AnujaKoralage)
 
 ## Copyright
 
