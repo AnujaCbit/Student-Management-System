@@ -21,11 +21,11 @@ public class Application {
 
     @Bean
     public ModelMapper modelMapper() {
-        log.trace("A TRACE Message");
-        log.debug("A DEBUG Message");
-        log.info("An INFO Message");
-        log.warn("A WARN Message");
-        log.error("An ERROR Message");
+//        log.trace("A TRACE Message");
+//        log.debug("A DEBUG Message");
+//        log.info("An INFO Message");
+//        log.warn("A WARN Message");
+//        log.error("An ERROR Message");
         return new ModelMapper();
     }
 }
