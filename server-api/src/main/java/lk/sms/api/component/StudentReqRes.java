@@ -1,8 +1,6 @@
-package lk.mmp.api.component;
+package lk.sms.api.component;
 
 import lombok.Data;
-import lombok.NonNull;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotNull;

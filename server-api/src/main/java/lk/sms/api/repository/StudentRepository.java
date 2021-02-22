@@ -1,6 +1,6 @@
-package lk.mmp.api.repository;
+package lk.sms.api.repository;
 
-import lk.mmp.core.domain.Student;
+import lk.sms.core.domain.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

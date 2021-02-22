@@ -1,10 +1,8 @@
-package lk.mmp.api.controller;
+package lk.sms.api.controller;
 
-import lk.mmp.api.component.CourseReqRes;
-import lk.mmp.api.component.StudentReqRes;
-import lk.mmp.api.services.CourseService;
-import lk.mmp.core.dao.CourseDAO;
-import lk.mmp.core.dao.StudentDAO;
+import lk.sms.api.component.CourseReqRes;
+import lk.sms.api.services.CourseService;
+import lk.sms.core.dao.CourseDAO;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

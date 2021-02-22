@@ -1,4 +1,4 @@
-package lk.mmp.core.domain;
+package lk.sms.core.domain;
 
 import lombok.Data;
 

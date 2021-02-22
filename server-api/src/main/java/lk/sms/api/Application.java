@@ -1,9 +1,8 @@
-package lk.mmp.api;
+package lk.sms.api;
 
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@EntityScan("lk.mmp.core.domain")
+@EntityScan("lk.sms.core.domain")
 @Slf4j
 public class Application {
 

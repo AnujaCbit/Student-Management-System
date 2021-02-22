@@ -1,12 +1,10 @@
-package lk.mmp.api.services;
+package lk.sms.api.services;
 
-import lk.mmp.api.component.CourseReqRes;
-import lk.mmp.core.dao.CourseDAO;
-import org.springframework.stereotype.Service;
+import lk.sms.api.component.CourseReqRes;
+import lk.sms.core.dao.CourseDAO;
 
 import java.util.List;
 
-@Service
 public interface CourseService {
 
     CourseDAO createAndUpdateCourse(CourseDAO courseDAO);

@@ -1,12 +1,10 @@
-package lk.mmp.api.services.Impl;
+package lk.sms.api.services.Impl;
 
-import lk.mmp.api.component.CourseReqRes;
-import lk.mmp.api.component.StudentReqRes;
-import lk.mmp.api.repository.CourseRepository;
-import lk.mmp.api.services.CourseService;
-import lk.mmp.core.dao.CourseDAO;
-import lk.mmp.core.domain.Course;
-import lk.mmp.core.domain.Student;
+import lk.sms.api.component.CourseReqRes;
+import lk.sms.api.repository.CourseRepository;
+import lk.sms.api.services.CourseService;
+import lk.sms.core.dao.CourseDAO;
+import lk.sms.core.domain.Course;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-//@Service
+@Service
 @Slf4j
 public class CourseServiceImpl implements CourseService {
 

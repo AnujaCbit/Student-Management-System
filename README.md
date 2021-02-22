@@ -11,14 +11,17 @@ For building and running the application you need:
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Maven 3](https://maven.apache.org)
+- mysql
 
 ## Running the application locally
 
-There are several ways to run this application on your local machine. One way is build the core library and execute the `main` method in the `lk.mmp.api.Application` class from your IDE.
+There are several ways to run this application on your local machine. One way is build the core library and execute the `main` method in the `Application` class from your IDE.
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
 ```shell
+cd core
+mvn clean install
 mvn spring-boot:run
 ```
 ## Used Technologies

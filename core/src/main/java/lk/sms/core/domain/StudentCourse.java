@@ -1,6 +1,6 @@
-package lk.mmp.core.domain;
+package lk.sms.core.domain;
 
-import lk.mmp.core.common.StudentCourseID;
+import lk.sms.core.common.StudentCourseID;
 import lombok.Data;
 
 import javax.persistence.*;

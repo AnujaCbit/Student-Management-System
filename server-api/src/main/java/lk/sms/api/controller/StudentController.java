@@ -1,8 +1,8 @@
-package lk.mmp.api.controller;
+package lk.sms.api.controller;
 
-import lk.mmp.api.component.StudentReqRes;
-import lk.mmp.api.services.StudentService;
-import lk.mmp.core.dao.StudentDAO;
+import lk.sms.api.component.StudentReqRes;
+import lk.sms.api.services.StudentService;
+import lk.sms.core.dao.StudentDAO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

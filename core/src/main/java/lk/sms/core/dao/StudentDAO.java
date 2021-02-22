@@ -1,4 +1,4 @@
-package lk.mmp.core.dao;
+package lk.sms.core.dao;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
