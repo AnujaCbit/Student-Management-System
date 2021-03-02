@@ -27,6 +27,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public StudentDAO createAndUpdateStudent(StudentDAO studentDAO) {
         Student student = modelMapper.map(studentDAO, Student.class);
+        log.info("Object Converted to entity : " + student.toString());
         Student savedStudent = studentRepository.save(student);
         log.info("Student saved or updated");
 

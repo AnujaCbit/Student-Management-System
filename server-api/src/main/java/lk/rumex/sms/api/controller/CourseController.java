@@ -55,9 +55,10 @@ public class CourseController {
     }
 
     @GetMapping(path = "/{id}")
-    public ResponseEntity getStudentById(@PathVariable("tv-show") Long id) {
+    public ResponseEntity getCourseById(@PathVariable("") Long id) {
         CourseReqRes courseReqRes = courseService.getCourseStudents(id);
         if (courseReqRes == null) {
+            log.warn("No course exists");
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity(courseReqRes, HttpStatus.OK);

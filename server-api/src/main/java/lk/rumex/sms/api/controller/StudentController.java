@@ -3,6 +3,7 @@ package lk.rumex.sms.api.controller;
 import lk.rumex.sms.api.services.StudentService;
 import lk.rumex.sms.api.component.StudentReqRes;
 import lk.rumex.sms.core.dao.StudentDAO;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 @RestController
 @CrossOrigin(value = "*")
 @RequestMapping("api/v1/student")
+@Slf4j
 public class StudentController {
 
     @Autowired
@@ -28,8 +30,9 @@ public class StudentController {
     public ResponseEntity create(@RequestBody @Valid StudentReqRes student) {
 
         StudentDAO studentDAO = modelMapper.map(student, StudentDAO.class);
+        log.info("Object Converted to dao : " + studentDAO.toString());
         studentService.createAndUpdateStudent(studentDAO);
-
+        log.info("End of the method");
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
@@ -37,9 +40,11 @@ public class StudentController {
     public ResponseEntity update(@RequestBody @Valid StudentReqRes student) {
 
         StudentDAO studentDAO = modelMapper.map(student, StudentDAO.class);
+        log.info("Object Converted to dao : " + studentDAO.toString());
         StudentDAO existingStudent = studentService.getExistingStudent(studentDAO);
 
         if (existingStudent == null) {
+            log.warn("No existing student for update process");
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
 
@@ -47,27 +52,30 @@ public class StudentController {
         existingStudent.setBirthDay(student.getBirthDay());
 
         studentService.createAndUpdateStudent(existingStudent);
-
+        log.info("End of the method");
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @GetMapping(path = "/all")
     public ResponseEntity getAll() {
+        log.info("Find all triggered");
         List<StudentDAO> allStudents = studentService.getAllStudents();
         List<StudentReqRes> collect = allStudents.stream().
                 map(studentDAO -> modelMapper.map(studentDAO, StudentReqRes.class)).
                 collect(Collectors.toList());
+        log.info("Array Converted to ReqRes : ");
 
         return new ResponseEntity(allStudents, HttpStatus.OK);
     }
 
     @GetMapping(path = "/{id}")
-    public ResponseEntity getStudentById(@PathVariable("tv-show") Long id) {
-        StudentReqRes studentCources = studentService.getStudentCources(id);
-        if (studentCources == null) {
+    public ResponseEntity getStudentById(@PathVariable("id") Long id) {
+        StudentReqRes student = studentService.getStudentCources(id);
+        if (student == null) {
+            log.warn("No Student Exists");
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity(studentCources, HttpStatus.OK);
+        return new ResponseEntity(student, HttpStatus.OK);
     }
 
 
